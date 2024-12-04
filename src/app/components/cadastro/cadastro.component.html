@@ -1,0 +1,98 @@
+<div class="container">
+  <form class="form-centrado">
+    <!--Imagem-->
+    <div class="container-img">
+      <img src="cadastro.png" alt="Cadastro" />
+    </div>
+
+    <!--Float de Atividade-->
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="atividade"
+        id="atividade"
+        placeholder="Nome da Atividade"
+        [(ngModel)]="atividade"
+        (ngModelChange)="verificarCondicao()"
+      />
+      <label for="atividade">Nome da atividade</label>
+    </div>
+
+    <!--Float de Prioridade-->
+    <div style="padding: 1rem 0">
+      <label for="">Tipo de prioridade</label>
+      <!--CheckBox 1 - Alta-->
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="option1"
+          [(ngModel)]="selectedOption"
+          (ngModelChange)="verificarCondicao()"
+          name="options"
+          value="Option 1"
+        />
+        <label class="form-check-label" for="option1">Alta</label>
+      </div>
+      <!--CheckBox 2 - Media-->
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="option2"
+          [(ngModel)]="selectedOption"
+          (ngModelChange)="verificarCondicao()"
+          name="options"
+          value="Option 2"
+          checked
+        />
+        <label class="form-check-label" for="option2">Media</label>
+      </div>
+      <!--CheckBox 3 - Baixa-->
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id="option3"
+          [(ngModel)]="selectedOption"
+          (ngModelChange)="verificarCondicao()"
+          name="options"
+          value="Option 3"
+        />
+        <label class="form-check-label" for="option3">Baixa</label>
+      </div>
+    </div>
+    <!--Float Textarea-->
+    <div class="form-floating mb-3">
+      <textarea
+        class="form-control"
+        id="floatingTextarea"
+        name="descricao"
+        placeholder="Descrição"
+        style="height: 100px"
+        [(ngModel)]="descricao"
+        (ngModelChange)="verificarCondicao()"
+      ></textarea>
+      <label for="floatingTextarea">Descrição</label>
+    </div>
+
+    <!--Botões-->
+    <div>
+      <input
+        type="button"
+        class="btn btn-success"
+        value="Enviar"
+        (click)="enviar()"
+      />
+      <input
+        type="button"
+        class="btn btn-primary"
+        value="Limpar"
+        (click)="limpar()"
+        [disabled]="!condicaoAtendida"
+      />
+    </div>
+    <p></p>
+  </form>
+</div>

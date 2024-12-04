@@ -1,0 +1,26 @@
+<div class="container-table" style="width: 100%; padding: 2em;">
+  <!--Titulo do campo de Listagem-->
+  <h1 style="text-align: center; padding-bottom: 15px;">Listagem de Atividades</h1>
+  <table class="table table-light table-hover">
+
+    <!--Cabeçalho da tabela-->
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Atividade</th>
+        <th scope="col">Prioridade</th>
+        <th scope="col">Descrição</th>
+      </tr>
+    </thead>
+
+    <!--Corpo do campo de tabelas-->
+    <tbody>
+      <tr *ngFor="let t of atividades; index as i">
+        <th>{{i + 1}}</th>
+        <td>*</td>
+        <td>*</td>
+        <td>&#64;*</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 80vh; /* Define a altura para ocupar toda a visualização */
+}
+
+.form-centrado {
+  width: 50%; /* Ajuste conforme necessário */
+
+}
+
+.container-img{
+  text-align: center;
+}
+
+img {
+  width: 250px;
+  margin-bottom: 30px;
+  .container {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 80vh; /* Define a altura para ocupar toda a visualização */
+  }
+
+  .form-centrado {
+    width: 50%; /* Ajuste conforme necessário */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+  }
+
+  .form-centrado img {
+    width: 250px;
+    margin-bottom: 30px;
+  }
+
+  .form-centrado input {
+    margin-bottom: 10px;
+  }
+
+  .form-centrado input[type="button"] {
+    margin: 15px 10px 0 0;
+  }
+
+  .prioridade-container {
+    align-self: flex-start; /* Alinha a div de prioridade à esquerda */
+    padding: 1rem 0;
+  }
+
+  textarea {
+    margin-bottom: 10px;
+  }
+
+}
+
+input{
+  margin-bottom: 5px;
+}
+
+input[type="button"]{
+  margin: 5px 10px 0 0;
+}
